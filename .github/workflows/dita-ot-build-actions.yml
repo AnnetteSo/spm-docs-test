@@ -11,9 +11,12 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
-      - name: Build PDF
-        uses: dita-ot/dita-ot-action@master
-        with:
-          input: document.ditamap
-          transtype: pdf
-          output-path: out
+- name: Build HTML5 using DITA-OT commands
+  uses: dita-ot/dita-ot-action@master
+  with:
+      install : |
+        dita install fox.jason.extend.css
+        dita install org.doctales.xmltask
+        dita install fox.jason.prismjs
+      build: |
+        dita -i document.ditamap -o out  -f pdf --filter=filter1.ditaval
