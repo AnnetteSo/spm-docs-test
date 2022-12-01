@@ -8,7 +8,7 @@ jobs:
     name: Build DITA
     runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 - name: Build HTML5 using DITA-OT commands
   uses: dita-ot/dita-ot-action@master
