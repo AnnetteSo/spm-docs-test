@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
-              echo Checkout complete
 - name: Build HTML5 using DITA-OT commands
   uses: dita-ot/dita-ot-action@master
   with:
